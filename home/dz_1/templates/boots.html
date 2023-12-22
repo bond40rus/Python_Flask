@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+Обувь
+{% endblock %}
+
+{% block content %}
+<h1>Магазин / Категория / Обувь</h1>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Цена р.</th>
+    </tr>
+    {% for boots in boots %}
+    <tr>
+        <td>{{ boots.name }}</td>
+        <td>{{ boots.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a></p></a>
+<a href="{{ url_for('shop') }}">Назад</a>
+{% endblock %}
