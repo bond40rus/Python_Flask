@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block title %}Задание 2{% endblock title %}
+
+{% block content %}
+<h1>Домашняя работа 2</h1>
+
+
+<form action="/hello/" method="post">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <p>Привет, "</p>
+    <input type="submit" value="Выход">
+</form>
+
+{% endblock content %}
