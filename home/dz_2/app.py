@@ -11,7 +11,7 @@ def menu():
     ]
     return dict(menu_items=menu_items)
 
-
+@aap.con
 @app.route('/')
 def index():
     return render_template('index.html')
